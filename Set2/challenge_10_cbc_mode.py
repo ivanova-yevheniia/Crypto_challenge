@@ -96,5 +96,6 @@ if __name__ == '__main__':
     cipher = AES.new(key, AES.MODE_CBC, IV)
     plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
 
-    print(f"{plaintext.decode()=}")
+    print(plaintext.decode())
+
 
