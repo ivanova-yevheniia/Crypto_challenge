@@ -13,6 +13,6 @@ if __name__ == "__main__":
     ciphertext = b64decode(data_b64)
     plaintext = aes_ecb_dec(b"YELLOW SUBMARINE", ciphertext)
 
-    print(f"{plaintext=}")
+    print(plaintext.decode())
 
 
