@@ -1,4 +1,7 @@
+from base64 import b64decode
 from Set1.challenge_02_fixed_XOR import bytes_xor
+from challenge_09_padding import unpad
+
 from Crypto.Cipher import AES
 import os
 
@@ -82,3 +85,16 @@ def new(key: bytes, mode: int, IV: bytes = None) -> _AES:
     if not IV:
         IV = os.urandom(16)
     return _AES(key, mode, IV)
+
+if __name__ == '__main__':
+    with open("text_challenge_10.txt") as f:
+        data_b64 = f.read()
+
+    ciphertext = b64decode(data_b64)
+    key = b'YELLOW SUBMARINE'
+    IV = b'\x00' * 16
+    cipher = AES.new(key, AES.MODE_CBC, IV)
+    plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
+
+    print(f"{plaintext.decode()=}")
+
