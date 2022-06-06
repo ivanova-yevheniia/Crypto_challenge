@@ -2,9 +2,9 @@ from itertools import combinations
 from base64 import b64decode
 from pprint import pprint
 
-from challenge_02_fixed_XOR import bytes_xor
-from challenge_03_single_byte_XOR import crack_xor_cipher
-from challenge_05_repeating_key_XOR import repeating_key_xor
+from Set1.challenge_02_fixed_XOR import bytes_xor
+from Set1.challenge_03_single_byte_XOR import crack_xor_cipher
+from Set1.challenge_05_repeating_key_XOR import repeating_key_xor
 
 def hamming_distance(a: bytes, b: bytes) -> int:
     print(weights)

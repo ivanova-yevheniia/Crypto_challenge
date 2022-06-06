@@ -1,7 +1,7 @@
 from dataclasses import dataclass, astuple
 from typing import Optional
 from collections import Counter
-from challenge_02_fixed_XOR import bytes_xor
+from Set1.challenge_02_fixed_XOR import bytes_xor
 from string import ascii_letters
 
 with open("someText.txt") as f:

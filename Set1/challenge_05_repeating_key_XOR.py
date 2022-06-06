@@ -1,6 +1,6 @@
 from itertools import cycle, islice
 
-from challenge_02_fixed_XOR import bytes_xor
+from Set1.challenge_02_fixed_XOR import bytes_xor
 
 def repeating_key_xor(key: bytes, plaintext: bytes) -> bytes:
     full_key = bytes(islice(cycle(key), len(plaintext)))

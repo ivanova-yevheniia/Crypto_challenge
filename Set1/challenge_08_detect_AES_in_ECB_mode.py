@@ -7,7 +7,7 @@ def bytes_to_chunks(b: bytes, chunk_size: int, quiet=True) -> list[bytes]:
     return chunks
 
 if __name__ == "__main__":
-    with open("text_challenge_8.txt") as f:
+    with open("../text_challenge_8.txt") as f:
         ciphertexts = [bytes.fromhex(line.strip()) for line in f]
 
     for i, ciphertext in enumerate(ciphertexts):

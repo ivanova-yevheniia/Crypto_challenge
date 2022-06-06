@@ -7,7 +7,7 @@ def aes_ecb_dec(key: bytes, ciphertext: bytes) -> bytes:
     return cipher.decrypt(ciphertext)
 
 if __name__ == "__main__":
-    with open("text_challenge_7.txt") as f:
+    with open("../text_challenge_7.txt") as f:
         data_b64 = f.read()
 
     ciphertext = b64decode(data_b64)
