@@ -30,7 +30,7 @@ class profile_service:
 if __name__ == '__main__':
     oracle = profile_service()
 
-    serv = oracle.encrypt_profile_for("foo@bar.com")
+    serv = oracle.encrypt_profile_for("fooo@fooo.com")
     print(oracle.decrypt_profile(serv))
 
     garbage = b'AAAAAAAAAAadmin' + b'\x0b'*11 +b'@barr.com'
